@@ -21,6 +21,7 @@ dependencies:
   - pycparser=2.20=pyh9f0ad1d_2
   - python=3.9.0=h6244533_2
   - python_abi=3.9=2_cp39
+  - pyyaml=6.0=py39hb82d6ee_0
   - setuptools=58.0.4=py39haa95532_0
   - six=1.16.0=pyh6c4a22f_0
   - sqlite=3.36.0=h2bbff1b_0
@@ -36,7 +37,12 @@ dependencies:
   - zlib=1.2.11=h62dcd97_4
   - pip:
     - backports-entry-points-selectable==1.1.0
+    - numpy==1.21.2
+    - pillow==8.4.0
     - platformdirs==2.4.0
-    - pyyaml==6.0
+    - torch==1.9.1+cu111
+    - torchaudio==0.9.1
+    - torchvision==0.10.1+cu111
+    - typing-extensions==3.10.0.2
     - virtualenv==20.8.1
-prefix: C:\Users\Admin\.conda\envs\erodetect
+prefix: C:\ProgramData\Anaconda3\envs\erodetect
