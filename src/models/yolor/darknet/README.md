@@ -1,7 +1,7 @@
 ## Model Zoo
 
 | Model | Test Size | AP<sup>val</sup> | AP<sub>50</sub><sup>val</sup> | AP<sub>75</sub><sup>val</sup> | AP<sub>S</sub><sup>val</sup> | AP<sub>M</sub><sup>val</sup> | AP<sub>L</sub><sup>val</sup> | batch1 throughput |
-| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | 
+| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | **YOLOv4-CSP** | 640 | **49.1%** | **67.7%** | **53.8%** | **32.1%** | **54.4%** | **63.2%** | 76 *fps* |
 | **YOLOR-CSP** | 640 | **49.2%** | **67.6%** | **53.7%** | **32.9%** | **54.4%** | **63.0%** | - |
 |  |  |  |  |  |  |  |
@@ -59,5 +59,5 @@ make -j8
 To reproduce inference speed, using:
 
 ```
-CUDA_VISIBLE_DEVICES=0 ./darknet detector demo cfg/coco.data cfg/yolov4-csp.cfg weights/yolov4-csp.weights source/test.mp4 -dont_show -benchmark 
+CUDA_VISIBLE_DEVICES=0 ./darknet detector demo cfg/coco.data cfg/yolov4-csp.cfg weights/yolov4-csp.weights source/test.mp4 -dont_show -benchmark
 ```

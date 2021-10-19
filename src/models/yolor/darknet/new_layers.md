@@ -14,7 +14,7 @@ PyTorch code:
 class Silence(nn.Module):
     def __init__(self):
         super(Silence, self).__init__()
-    def forward(self, x):    
+    def forward(self, x):
         return x
 ```
 
