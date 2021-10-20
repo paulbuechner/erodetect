@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Custom
+src/models/coco
+src/models/yolor/wandb
+src/models/yolor/runs
+src/models/yolor/*.pt
