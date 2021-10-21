@@ -141,5 +141,6 @@ cython_debug/
 src/models/coco
 src/models/data
 src/models/yolor/wandb
+src/models/yolor/inference
 src/models/yolor/runs
 src/models/yolor/*.pt
