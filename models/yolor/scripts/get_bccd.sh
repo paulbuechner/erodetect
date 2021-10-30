@@ -8,7 +8,7 @@
 #     /yolor
 
 # Download/unzip labels
-d='../data/bccd/' # unzip directory
+d='../data/bccd' # unzip directory
 url=https://public.roboflow.com/ds/0e3by4kfHe?key=6IcrKmhw11
 f='bccd.zip' # MB
 echo 'Downloading' $url$f ' ...'
