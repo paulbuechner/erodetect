@@ -173,7 +173,7 @@ def create_dataloader9(
 
 
 class InfiniteDataLoader(torch.utils.data.dataloader.DataLoader):
-    """ Dataloader that reuses workers
+    """Dataloader that reuses workers
 
     Uses same syntax as vanilla DataLoader
     """
@@ -192,7 +192,7 @@ class InfiniteDataLoader(torch.utils.data.dataloader.DataLoader):
 
 
 class _RepeatSampler(object):
-    """ Sampler that repeats forever
+    """Sampler that repeats forever
 
     Args:
         sampler (Sampler)
@@ -647,9 +647,11 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             )  # 8 threads
             pbar = tqdm(enumerate(results), total=n)
             for i, x in pbar:
-                self.imgs[i], self.img_hw0[i], self.img_hw[
-                    i
-                ] = x  # img, hw_original, hw_resized = load_image(self, i)
+                (
+                    self.imgs[i],
+                    self.img_hw0[i],
+                    self.img_hw[i],
+                ) = x  # img, hw_original, hw_resized = load_image(self, i)
                 gb += self.imgs[i].nbytes
                 pbar.desc = "Caching images (%.1fGB)" % (gb / 1e9)
 
@@ -1017,9 +1019,11 @@ class LoadImagesAndLabels9(Dataset):  # for training/testing
             )  # 8 threads
             pbar = tqdm(enumerate(results), total=n)
             for i, x in pbar:
-                self.imgs[i], self.img_hw0[i], self.img_hw[
-                    i
-                ] = x  # img, hw_original, hw_resized = load_image(self, i)
+                (
+                    self.imgs[i],
+                    self.img_hw0[i],
+                    self.img_hw[i],
+                ) = x  # img, hw_original, hw_resized = load_image(self, i)
                 gb += self.imgs[i].nbytes
                 pbar.desc = "Caching images (%.1fGB)" % (gb / 1e9)
 

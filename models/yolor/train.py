@@ -191,13 +191,13 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
 
     # Resume
     start_epoch, best_fitness = 0, 0.0
-    best_fitness_p, best_fitness_r, best_fitness_ap50, best_fitness_ap, best_fitness_f = (
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-    )
+    (
+        best_fitness_p,
+        best_fitness_r,
+        best_fitness_ap50,
+        best_fitness_ap,
+        best_fitness_f,
+    ) = (0.0, 0.0, 0.0, 0.0, 0.0)
     if pretrained:
         # Optimizer
         if ckpt["optimizer"] is not None:
