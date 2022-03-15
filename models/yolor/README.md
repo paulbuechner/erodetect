@@ -169,6 +169,7 @@ Single GPU training:
 
 ```
 python train.py --batch-size 8 --img 1280 1280 --data coco.yaml --cfg cfg/yolor_p6.cfg --weights '' --device 0 --name yolor_p6 --hyp hyp.scratch.1280.yaml --epochs 300
+python train.py --batch-size 2 --img 1280 1280 --data ../data/erodetect/data.yaml --cfg cfg/yolor_p6.cfg --device 0 --name erodetect --hyp hyp.scratch.1280.yaml --epochs 10
 ```
 
 Multiple GPU training:
@@ -191,6 +192,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 9527 train.p
 
 ```
 python detect.py --source inference/images/horses.jpg --cfg cfg/yolor_p6.cfg --weights yolor_p6.pt --conf 0.25 --img-size 1280 --device 0
+python detect.py --source ../data/erodetect/inference/2.jpg --names ../data/erodetect/data.names --cfg cfg/yolor_p6.cfg --weights runs/train/erodetect6/weights/best_overall.pt --conf 0.60 --img-size 1280 --device 0
 ```
 
 You will get the results:
