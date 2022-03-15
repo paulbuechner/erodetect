@@ -3,6 +3,7 @@ import argparse
 import zipfile
 import shutil
 
+
 def copy_files(src, dest):
     src_files = os.listdir(src)
 
@@ -14,19 +15,20 @@ def copy_files(src, dest):
 
             shutil.copy(full_file_name, dest)
 
+
 # Unzip all files in given dir into specifed dir and process it's content
 if __name__ == "__main__":
     cwd = os.getcwd()
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--path",
+        "--src",
         type=str,
         default=cwd,
         help="dir path containing the zip files (default: current working dir)",
     )
     parser.add_argument(
-        "--to",
+        "--dest",
         type=str,
         default=cwd,
         help="dir path to unzip to (default: current working dir)",
@@ -37,29 +39,28 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    path = args.path
-    files = os.listdir(path)
+    src, dest = args.src, args.dest
+    files = os.listdir(src)
 
     # Unzip all files in given dir
     for file in files:
         if file.endswith(".zip"):
-            filePath = f"{path}/{file}"
+            filePath = f"{src}/{file}"
             zip_file = zipfile.ZipFile(filePath)
 
             for names in zip_file.namelist():
-                zip_file.extract(names, f"{args.to}/Temp")
+                zip_file.extract(names, f"{args.dest}/Temp")
             zip_file.close()
 
             # Copy train, valid and test images to train, valid and test dir
-            copy_files(f"{args.to}/Temp/train/images", f"{args.to}/train/images")
-            copy_files(f"{args.to}/Temp/train/labels", f"{args.to}/train/labels")
-            copy_files(f"{args.to}/Temp/test/images", f"{args.to}/test/images")
-            copy_files(f"{args.to}/Temp/test/labels", f"{args.to}/test/labels")
-            copy_files(f"{args.to}/Temp/valid/images", f"{args.to}/valid/images")
-            copy_files(f"{args.to}/Temp/valid/labels", f"{args.to}/valid/labels")
+            copy_files(f"{dest}/Temp/train/images", f"{dest}/train/images")
+            copy_files(f"{dest}/Temp/train/labels", f"{dest}/train/labels")
+            copy_files(f"{dest}/Temp/test/images", f"{dest}/test/images")
+            copy_files(f"{dest}/Temp/test/labels", f"{dest}/test/labels")
+            copy_files(f"{dest}/Temp/valid/images", f"{dest}/valid/images")
+            copy_files(f"{dest}/Temp/valid/labels", f"{dest}/valid/labels")
 
             # Copy data.yaml
-            shutil.copy(f"{args.to}/Temp/data.yaml", f"{args.to}/data.yaml")
+            shutil.copy(f"{dest}/Temp/data.yaml", f"{dest}/data.yaml")
 
             print(f"{file} unzipped")
-
