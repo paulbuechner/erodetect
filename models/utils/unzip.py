@@ -3,6 +3,8 @@ import argparse
 import zipfile
 import shutil
 
+# python utils/unzip.py --src ./data/erodetect/archives --dest ./data/erodetect
+
 
 def copy_files(src, dest):
     src_files = os.listdir(src)

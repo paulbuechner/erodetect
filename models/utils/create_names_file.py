@@ -3,6 +3,8 @@ import ast
 import os
 import argparse
 
+# python ./utils/create_names_file.py --path ./data/erodetect
+
 if __name__ == "__main__":
     cwd = os.getcwd()
 

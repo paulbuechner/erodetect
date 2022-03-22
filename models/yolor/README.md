@@ -144,6 +144,7 @@ bash scripts/get_pretrain.sh
 
 ```
 python test.py --data data/coco.yaml --img 1280 --batch 32 --conf 0.001 --iou 0.65 --device 0 --cfg cfg/yolor_p6.cfg --weights yolor_p6.pt --name yolor_p6_val
+python test.py --data ../data/erodetect/data.yaml --img 1280 --batch 32 --conf 0.6 --iou 0.65 --device 0 --cfg cfg/yolor_p6.cfg --weights runs/train/erodetect2/weights/best_overall.pt --name yolor_p6_val --batch-size 10 --names ../data/erodetect/data.names
 ```
 
 You will get the results:
