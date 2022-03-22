@@ -38,7 +38,6 @@ dependencies:
   - pip:
     - absl-py==0.15.0
     - backports-entry-points-selectable==1.1.0
-    - black==21.9b0
     - cachetools==4.2.4
     - charset-normalizer==2.0.7
     - click==8.0.3
@@ -56,12 +55,10 @@ dependencies:
     - kiwisolver==1.3.2
     - markdown==3.3.4
     - matplotlib==3.4.3
-    - mypy-extensions==0.4.3
     - numpy==1.21.2
     - oauthlib==3.1.1
     - opencv-python==4.5.3.56
     - pandas==1.3.4
-    - pathspec==0.9.0
     - pathtools==0.1.2
     - pillow==8.4.0
     - platformdirs==2.4.0
@@ -74,7 +71,6 @@ dependencies:
     - pyparsing==2.4.7
     - python-dateutil==2.8.2
     - pytz==2021.3
-    - regex==2021.10.21
     - requests==2.26.0
     - requests-oauthlib==1.3.0
     - rsa==4.7.2
@@ -89,7 +85,6 @@ dependencies:
     - tensorboard-plugin-wit==1.8.0
     - termcolor==1.1.0
     - thop==0.0.31-2005241907
-    - tomli==1.2.1
     - torch==1.9.1+cu111
     - torch-tb-profiler==0.3.0
     - torchaudio==0.9.1
@@ -101,4 +96,3 @@ dependencies:
     - wandb==0.12.5
     - werkzeug==2.0.2
     - yaspin==2.1.0
-prefix: C:\ProgramData\Anaconda3\envs\erodetect
