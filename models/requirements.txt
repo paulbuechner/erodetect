@@ -11,7 +11,7 @@ colorama==0.4.4
 configparser==5.0.2
 cycler==0.10.0
 Cython==0.29.24
-distlib==0.3.3
+distlib==0.3.6
 docker-pycreds==0.4.0
 editdistance-s==1.0.0
 filelock==3.3.1
